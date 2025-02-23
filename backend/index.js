@@ -10,7 +10,7 @@ import path from "path"
 const port = process.env.PORT || 3000;
 const app = express();
 
-const _dirname = path.resolve()
+
 
 app.use(express.json());
 app.use(cors({ origin: '*' }));
@@ -18,10 +18,10 @@ app.use(express.urlencoded({ extended: true }))
 
 app.use('/users', userRouter);
 
-app.use(express.static(path.join(_dirname, "/frontend/dist")));
+app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
 app.get("*", (_, res) => {
-    res.sendFile(path.join(_dirname, "frontend", "dist", "index.html"));
+    res.sendFile(path.join(__dirname, "../frontend/dist", "index.html"));
 });
 
 
