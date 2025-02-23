@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 import ProfileInfo from "../Cards/ProfileInfo";
 import { useNavigate } from "react-router-dom";
-import SearchBar from "../SearchBar/Searchbar";
 import { useState } from "react";
+import SearchBar from "../SearchBar/SearchBar";
 
 const Navbar = ({ userInfo, onSearchNote, handleClearSearch }) => {
   const [searchQuery, setSearchQuery] = useState("");
