@@ -15,7 +15,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 app.use(express.json());
-app.use(cors({ origin: 'https://todo-deployed.onrender.com' }));
+app.use(cors({ origin: '*' }));
 app.use(express.urlencoded({ extended: true }))
 
 app.use('/users', userRouter);
